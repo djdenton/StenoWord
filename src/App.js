@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from './firebase.js';
+import StenoTitleSection from './components/visual.js';
+import DICTATION from './components/dictation.js';
+import UID from './components/uid.js';
+import Shim from './components/shim.js';
 
 // Added firebase
 // When UID changes test whether a dictation exists with the same ID.
 // If valid then bind the dictation to the paragraph
 
 
-function UID(props){
-    return(
-      <form>
-        <input type="text" value={props.uid} onChange={props.onUIDChange} />
-      </form>
-    );
-}
-
-function DICTATION(props){
-  const dictation = props.dictation;
-  const listSections = Object.keys(dictation).map((key) => <li key={key}>{dictation[key]}</li>);
-
-  return(
-    <ul>{listSections}</ul>
-  );
-}
 
 
 class App extends Component {
@@ -49,13 +37,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <StenoTitleSection />
+      <Shim />
         <div id="content-main">
           <div className="padding">
-              <p>Type the dictation UID here</p>
               <UID 
                 uid={this.state.uid}
                 onUIDChange={this.handleUIDChange}
               />
+              <Shim />
               <DICTATION dictation={this.state.dictation}/>
           </div>
         </div>

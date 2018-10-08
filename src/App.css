@@ -1,17 +1,68 @@
 .App {
   text-align: center;
+  padding: 15px;
+}
+.titlebox {
+  
+  width: 250px;
+  border: 25px solid rgb(199, 199, 199);
+  padding: 0px;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  overflow: auto; 
+  background-color: rgb(199, 199, 199);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+.innerbox {
+  width: 250px;
+  border: 25px solid rgb(199, 199, 199);
+  background-color: rgb(199, 199, 199);
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding-bottom: 0px;
 }
 
+.innerbox2 {
+  width: 250px;
+  border: 25px solid rgb(181, 224, 241);
+  background-color: rgb(181, 224, 241);
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding-bottom: 0px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.innerbox3 {
+  width: 270px;
+  border: 15px solid rgb(199, 199, 199);
+  background-color: rgb(235, 235, 235);
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding-bottom: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.shim {
+  height: 10px;
+  background-color: white;
+}
+
+
 #content-main {
+  
   background: #fff;
-  position: fixed;
-  top: 80px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   overflow: auto; 
-}
-
-.padding {
-  padding: 15px;
 }
